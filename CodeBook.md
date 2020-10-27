@@ -25,7 +25,7 @@ Following steps have been taken to prepare the data for further analysis and cre
 
 # Table data
 
-The file "assignment_result" contains following data (54 rows, 68 columns):
+The file "assignment_result" contains following data (180 rows, 68 columns):
 
 - activity                 : Factor w/ 6 levels "WALKING","WALKING_UPSTAIRS",..: 1 1 1 1 1 1 1 1 1 2 ...
 - subject                  : int [1:54] 1 2 3 4 5 6 7 8 9 1 ...

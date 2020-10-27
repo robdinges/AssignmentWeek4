@@ -1,19 +1,22 @@
 #
 # R script to clean data from ...
 #
+print('loading libraries ...')
+library(dplyr)
+print('done')
 
 # test file a 2947, 1=observations. 2=activities, 3=subjects
 print('reading test files ...')
 test_observations <- read.fwf('UCI HAR Dataset/test/X_test.txt', rep(16,561))
 test_activities <- read.fwf('UCI HAR Dataset/test/Y_test.txt', 1,col.names="activity")
-test_subjects <- read.fwf('UCI HAR Dataset/test/subject_test.txt', 1,col.names="subject")
+test_subjects <- read.fwf('UCI HAR Dataset/test/subject_test.txt', 10, col.names="subject")
 print('done')
 
 # train file b 7352 obs, 1=observations. 2=activities, 3=subjects
 print('reading train files ...')
 train_observations <- read.fwf('UCI HAR Dataset/train/x_train.txt', rep(16,561))
-train_activities <- read.fwf('UCI HAR Dataset/train/Y_train.txt', 1,col.names="activity")
-train_subjects <- read.fwf('UCI HAR Dataset/train/subject_train.txt', 1,col.names="subject")
+train_activities <- read.fwf('UCI HAR Dataset/train/Y_train.txt', 1, col.names="activity")
+train_subjects <- read.fwf('UCI HAR Dataset/train/subject_train.txt', 10, col.names="subject")
 print('done')
 
 # merge the data
